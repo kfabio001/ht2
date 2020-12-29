@@ -1,0 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var express_1 = require("express");
+var router = express_1.Router();
+var user_controller_1 = require("../controllers/user.controller");
+router.route('/updateProfilePicture').post(user_controller_1.updateProfilePhoto);
+router.route('/updateUserInfo').post(user_controller_1.updateInfo);
+router.route('/updatePassword').post(user_controller_1.updatePassword);
+router.route('/credits').post(user_controller_1.updateCredits);
+//import { getCart, confirmRequest, cleanCart } from '../controllers/cart.controller';
+//router.route('/cart/:email').get(getCart);
+//router.route('/cart').post(confirmRequest);
+//router.route('/cleanCart').post(cleanCart);
+exports.default = router;

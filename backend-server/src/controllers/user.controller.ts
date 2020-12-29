@@ -58,13 +58,16 @@ export async function getUser(req: Request, res: Response) {
     let result: OracleDB.Result<any> = await connection.execute(query);
     try {
         let response=[]
+        
+        
+        let responses
         if (result.rows) {
-            
+           // res.send(result)
             for (let i = 0; i < result.rows.length; i++) {
-            let responses = {
-                nombre: result.rows[i],
-                email: result.rows[i],
-                contrasena: result.rows[i],
+             responses = {
+            //    nombre: result.rows[i],
+                //email: result.rows[i],
+                usuario: result.rows[i]
                
             }
             response.push(responses);
