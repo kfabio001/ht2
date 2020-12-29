@@ -7,7 +7,7 @@ export async function checkConnection() {
         connection = await oracledb.getConnection({
             user: 'root',
             password: 'root',
-            connectString: '34.123.90.103:1521/ORCL18'
+            connectString: '104.197.70.247:1521/ORCL18'
         });
         
         console.log("Successfully connected to Oracle!")
